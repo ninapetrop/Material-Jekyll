@@ -1,0 +1,29 @@
+// Edit Navigation and links here
+mixin nav-content()
+  ul
+    li.arts: a(href='#') Arts & Music
+    li.personal: a(href='#') Personal Projects
+    li.critiques: a(href='#') Lessons & Tips
+    li.archives: a(href='#') Archives
+-// ---------------------------
+
+.mobile-nav
+  +nav-content()
+
+header
+  .header-position
+    .identity-box
+      h1.logo Exep
+      p.tagline unusual; not typical
+      hr
+      .social-bar
+        img.socialIcon(src='{{ site.url }}/assets/img/google.png')
+        img.socialIcon(src='{{ site.url }}/assets/img/twitter.png')
+        img.socialIcon(src='{{ site.url }}/assets/img/behance.png')
+        img.socialIcon(src='{{ site.url }}/assets/img/github.png')
+      hr
+    nav
+      +nav-content()
+    p Tell me about it bro    
+    
+    .mobile-nav-toggle: span

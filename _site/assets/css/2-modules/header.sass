@@ -1,0 +1,161 @@
+header
+  width: 200px
+  background: #eeeeee
+  padding: 30px 0
+
+  .header-position
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    width: 200px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    // media break below
+
+  .logo
+    +hide-text
+    max-width: 200px
+    background:
+      image: url(/assets/img/logo.png)
+      repeat: no-repeat
+      position: center
+      size: contain
+    height: 80px
+
+  .tagline
+    text-align: center
+
+  .social-bar
+    display: flex
+    padding: 10px 0
+    img
+      height: 37px
+      width: 37px
+      margin-right: 5px
+      &:first-child
+        margin-left: 19px
+      &:last-child
+        margin-right: 19px
+
+  nav
+    ul
+      list-style: none
+      margin: 20px 0
+      padding-left: 0
+      li
+        margin-bottom: 10px
+        height: 15px
+        padding: 10.5px 0 24.5px 20px
+        font-weight: 700
+        font-size: 18px
+
+        &:last-child
+          margin-bottom: 0
+
+        a
+          text-decoration: none
+          color: white
+
+      .arts
+        background: #4db6ac
+      .personal
+        background: #ff8a65
+      .critiques
+        background: #ffd54f
+      .archives
+        background: #fafafa
+        a
+          color: #696969
+
+  .mobile-nav-toggle
+    display: none
+    width: 50px
+    height: 50px
+    align-items: center
+    cursor: pointer
+
+    span,
+    span:before,
+    span:after
+      content: ""
+      display: block
+      height: 2px
+      width: 100%
+      background: #333
+      position: relative
+
+      transition: all 0.3s ease-in-out
+
+    span:before
+      top: 15px
+
+    span:after
+      top: -17px
+
+    &.is-open span
+      background: transparent
+
+    &.is-open span:before,
+    &.is-open span:after
+      transform-origin: center
+      transform: rotate(45deg)
+      top: 0
+
+    &.is-open span:before
+      transform: rotate(-45deg)
+
+// Mobile Nav
+.mobile-nav
+  display: none
+  position: absolute
+  width: 100%
+  background: white
+  padding: 30px 0 20px
+  transform: translateY(-100%)
+  transition: all 0.3s ease-in-out
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+
+    li
+      text-align: center
+      margin-bottom: 10px
+    a
+      text-decoration: none
+
+@media (max-width: 775px)
+  header
+    width: auto
+    padding: 10px 20px 10px 0
+
+    .header-position
+      width: auto
+      position: relative
+      top: auto
+      bottom: auto
+      left: auto
+      flex-direction: row
+      align-items: center
+
+      hr,
+      .social-bar
+        display: none
+
+    nav,
+    p
+      display: none
+    .logo
+      height: 50px
+      padding: 0
+
+    .mobile-nav-toggle
+      display: flex
+
+  .mobile-nav.is-open
+    display: block
+    transform: translateY(0%)
