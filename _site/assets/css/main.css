@@ -439,9 +439,9 @@ header {
       width: 37px;
       margin-right: 5px; }
       header .social-bar img:first-child {
-        margin-left: 19px; }
+        margin-left: 43.5px; }
       header .social-bar img:last-child {
-        margin-right: 19px; }
+        margin-right: 43.5px; }
   header nav ul {
     list-style: none;
     margin: 20px 0;
@@ -473,7 +473,8 @@ header {
     header nav ul span.lessons {
       background: #ffd54f; }
     header nav ul span.archives {
-      background: #fafafa; }
+      background: #fafafa;
+      color: #696969; }
     header nav ul .arts {
       background: #4db6ac; }
     header nav ul .personal {
@@ -484,6 +485,14 @@ header {
       background: #fafafa; }
       header nav ul .archives a {
         color: #696969; }
+    header nav ul li.page {
+      float: right;
+      font-weight: 700;
+      font-size: 16px; }
+      header nav ul li.page a {
+        color: #696969; }
+      header nav ul li.page:first-child {
+        margin-top: 15px; }
   header .mobile-nav-toggle {
     display: none;
     width: 50px;
@@ -592,7 +601,13 @@ header {
   display: flex;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   @media (max-width: 775px) {
     .home-sections {
       padding: 10px; } }
@@ -613,7 +628,14 @@ article {
           animation-fill-mode: both; }
   article .post-title {
     color: #303841;
-    font-size: 24px; }
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-decoration: none; }
+    article .post-title:hover {
+      text-decoration: underline;
+      -moz-text-decoration-color: #e8e8e8;
+           text-decoration-color: #e8e8e8; }
   article .meta {
     text-align: right;
     text-transform: capitalize;
@@ -645,3 +667,8 @@ article.lessons {
   to {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0); } }
+
+.post-card {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center; }

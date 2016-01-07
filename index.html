@@ -7,7 +7,7 @@ title: Home
 <!-- this loop goes through your posts and color codes them based on category. to change the color associated with each category, go to /assets/css/1-base/_vars.scss -->
 {% for post in site.posts limit:10 %}
   <article class="post-card animated fadeInDown {{ post.category }}">
-    <h2 class="post-title">{{ post.title }}</h2>
+    <a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
     <hr>
     <p class"post-content">{{ post.excerpt }}</p>
     <p class="meta">{{ post.date | date: "%B %-d, %Y" }} | {{ post.category }}</p>

@@ -9,6 +9,9 @@ mixin nav-content()
     li.lessons: a(href='#') Lessons & Tips
     span.archives {{ site.posts | size }}
     li.archives: a(href='#') Archives
+    hr
+    li.page: a(href='#') Page 1
+    li.page: a(href='#') Page 2
 -// ---------------------------
 
 .mobile-nav
@@ -17,7 +20,8 @@ mixin nav-content()
 header
   .header-position
     .identity-box
-      h1.logo Exep
+      a(href='{{ site.url }}/index.html')
+        h1.logo Exep
       p.tagline unusual; not typical
       hr
       .social-bar
@@ -28,6 +32,5 @@ header
       hr
     nav
       +nav-content()
-    p Tell me about it bro    
     
     .mobile-nav-toggle: span

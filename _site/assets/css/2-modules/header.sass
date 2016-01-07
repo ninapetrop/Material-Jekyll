@@ -39,9 +39,9 @@ header
       width: 37px
       margin-right: 5px
       &:first-child
-        margin-left: 19px
+        margin-left: 43.5px
       &:last-child
-        margin-right: 19px
+        margin-right: 43.5px
 
   nav
     ul
@@ -62,6 +62,7 @@ header
         &:last-child
           margin-bottom: 0
 
+
         a
           text-decoration: none
           color: white
@@ -78,6 +79,7 @@ header
         background: $lessons
       span.archives
         background: $archives
+        color: #696969
 
       // Li colors for category names
       .arts
@@ -91,6 +93,12 @@ header
         a
           color: #696969
 
+      li.page
+        float: right
+        a
+          color: $text-color
+        &:first-child
+          margin-top: 15px
   .mobile-nav-toggle
     display: none
     width: 50px
