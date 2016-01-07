@@ -1,14 +1,17 @@
 header
-  width: 200px
+  width: 250px
   background: #eeeeee
   padding: 30px 0
+
+  @media (min-width: 775px)
+    box-shadow: 5px 0 5px -3px rgba(158, 158, 158, .6)
 
   .header-position
     position: fixed
     top: 0
     left: 0
     bottom: 0
-    width: 200px
+    width: 250px
     display: flex
     flex-direction: column
     justify-content: space-between
@@ -17,7 +20,7 @@ header
 
   .logo
     +hide-text
-    max-width: 200px
+    max-width: 250px
     background:
       image: url(/assets/img/logo.png)
       repeat: no-repeat
@@ -45,28 +48,46 @@ header
       list-style: none
       margin: 20px 0
       padding-left: 0
-      li
+      li, span
         margin-bottom: 10px
         height: 15px
-        padding: 10.5px 0 24.5px 20px
+        padding: 10.5px 0 24.5px 0
         font-weight: 700
         font-size: 18px
-
+        float: left
+        color: white
+      li
+        width: 185px
+        padding-left: 15px
         &:last-child
           margin-bottom: 0
 
         a
           text-decoration: none
           color: white
+      span
+        opacity: .6
+        width: 50px
+        text-align: center
+      // # colors for each category
+      span.arts
+        background: $arts
+      span.personal
+        background: $personal
+      span.lessons
+        background: $lessons
+      span.archives
+        background: $archives
 
+      // Li colors for category names
       .arts
-        background: #4db6ac
+        background: $arts
       .personal
-        background: #ff8a65
-      .critiques
-        background: #ffd54f
+        background: $personal
+      .lessons
+        background: $lessons
       .archives
-        background: #fafafa
+        background: $archives
         a
           color: #696969
 
@@ -131,7 +152,8 @@ header
 @media (max-width: 775px)
   header
     width: auto
-    padding: 10px 20px 10px 0
+    padding: 5px 20px 5px 0
+    height: 40px
 
     .header-position
       width: auto
@@ -140,7 +162,7 @@ header
       bottom: auto
       left: auto
       flex-direction: row
-      align-items: center
+      align-items: space-between
 
       hr,
       .social-bar
@@ -150,8 +172,9 @@ header
     p
       display: none
     .logo
-      height: 50px
+      height: 40px
       padding: 0
+      margin-top: 0
 
     .mobile-nav-toggle
       display: flex

@@ -2,7 +2,7 @@
 layout: post
 title:  "Nike Flyknit 3.0 Review"
 date:   2014-04-20 09:11:03
-category: arts
+category: lessons
 description: Phasellus hendrerit. Pellent aliquet nibh nec urna. In nis aliquet vel, dapibus id,mattis.
 excerpt_separator: <!--/exerpt-->
 ---

@@ -1,9 +1,13 @@
 // Edit Navigation and links here
 mixin nav-content()
   ul
+    span.arts {{ category.advice | last | size }}
     li.arts: a(href='#') Arts & Music
+    span.personal {{ posts.category.personal | size }}
     li.personal: a(href='#') Personal Projects
-    li.critiques: a(href='#') Lessons & Tips
+    span.lessons {{ site.category.lessons | size }}
+    li.lessons: a(href='#') Lessons & Tips
+    span.archives {{ site.posts | size }}
     li.archives: a(href='#') Archives
 -// ---------------------------
 

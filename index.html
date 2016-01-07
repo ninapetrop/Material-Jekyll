@@ -3,11 +3,13 @@ layout: default
 title: Home
 ---
 
-<section>
-  <article class="post-card">
-    <h2 class="post-title">Once Upon a Time</h2>
+
+<!-- this loop goes through your posts and color codes them based on category. to change the color associated with each category, go to /assets/css/1-base/_vars.scss -->
+{% for post in site.posts limit:10 %}
+  <article class="post-card animated fadeInDown {{ post.category }}">
+    <h2 class="post-title">{{ post.title }}</h2>
     <hr>
-    <p class"post-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-    <p class="meta">Nov. 12 2015 | Category</p>
+    <p class"post-content">{{ post.excerpt }}</p>
+    <p class="meta">{{ post.date | date: "%B %-d, %Y" }} | {{ post.category }}</p>
   </article>
-</section>
+{% endfor %}
